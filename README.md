@@ -1,21 +1,36 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Web, Desktop.
+# CMPProgress (your Compose Multiplatform Progress Indicators library)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b5629329-9a03-471a-9cf5-5acd29c3fa59" alt="CMPProgress GIF">
+</p>
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+## Key Features
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+**Cross-Platform:**
+CMPProgress is designed to integrate seamlessly with Compose Multiplatform projects, providing consistent functionality and a unified experience across iOS, Android, Desktop, and Web platforms.
 
+**Stylish Progress Indicators :**
+CMPProgress offers a range of visually appealing progress indicators, allowing you to enhance the user interface with smooth animations and customizable styles. Whether you need a simple loading spinner or a more complex progress bar, CMPProgress has you covered with modern and eye-catching designs.
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
-[Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform/#compose-multiplatform),
-[Kotlin/Wasm](https://kotl.in/wasm/)…
+## Installation
 
-We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public Slack channel [#compose-web](https://slack-chats.kotlinlang.org/c/compose-web).
-If you face any issues, please report them on [GitHub](https://github.com/JetBrains/compose-multiplatform/issues).
+Add the following dependency to your app specific `build.gradle.kts` file:
 
-You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
+```kotlin
+commonMain.dependencies {
+    implementation("io.github.mohamed-mekawy:CMPProgress:version")
+}
+```
+Replace version with the desired version of CMPProgress you wish to use (current version is `0.1`)
+
+## Available Progress Indicators
+### Circular Progress
+- ScatteredArcsProgress
+- DroppingDotsProgress
+- AnimatingArcsProgress
+- AnimatingCircleWithArcsProgress
+ 
+### Text Progress
+- HighLightedLettersTextProgress
+- HorizontalGradientTextProgress
+- LinearGradientTextProgress
+- JumpingDotLettersTextProgress
