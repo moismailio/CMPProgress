@@ -15,7 +15,7 @@ compose-plugin = "1.6.11"
 junit = "4.13.2"
 kotlin = "2.0.0"
 kotlinx-coroutines = "1.8.1"
-cmp-progress = "0.1"
+cmp-progress = "0.2"
 
 
 [libraries]

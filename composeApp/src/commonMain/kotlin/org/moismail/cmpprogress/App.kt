@@ -19,11 +19,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.moismail.cmpprogress.ui.CircularProgressContent
+import org.moismail.cmpprogress.ui.SegmentedLoaders
 import org.moismail.cmpprogress.ui.TextProgressContent
 
 @Composable
@@ -59,9 +61,11 @@ fun App() {
                         },
                         content = {
                             Text(
-                                "Circular Progress",
+                                text = "Circular Progress",
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
                                 color = MaterialTheme.colors.onBackground,
-                                fontSize = TextUnit(14f, TextUnitType.Sp),
+                                fontSize = TextUnit(12f, TextUnitType.Sp),
                                 fontWeight = FontWeight.Bold
                             )
                         }
@@ -74,9 +78,28 @@ fun App() {
                         },
                         content = {
                             Text(
-                                "Text Progress",
+                                text = "Text Progress",
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
                                 color = MaterialTheme.colors.onBackground,
-                                fontSize = TextUnit(14f, TextUnitType.Sp),
+                                fontSize = TextUnit(12f, TextUnitType.Sp),
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    )
+                    Tab(
+                        modifier = Modifier.padding(20.dp),
+                        selected = selectedTab.value == 2,
+                        onClick = {
+                            selectedTab.value = 2
+                        },
+                        content = {
+                            Text(
+                                text = "Segmented Loaders",
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                                color = MaterialTheme.colors.onBackground,
+                                fontSize = TextUnit(12f, TextUnitType.Sp),
                                 fontWeight = FontWeight.Bold
                             )
                         }
@@ -88,8 +111,9 @@ fun App() {
                     CircularProgressContent()
                 else if (selectedTab.value == 1)
                     TextProgressContent()
+                else if (selectedTab.value == 2)
+                    SegmentedLoaders()
             }
         }
-
     }
 }
