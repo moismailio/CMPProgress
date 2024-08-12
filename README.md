@@ -1,4 +1,11 @@
 # CMPProgress (your Compose Multiplatform Progress Indicators library)
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/29638861-f9d4-4aa7-ad26-cfcb65a68bda" alt="CMPProgress BroadView">
+</p>
+
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b5629329-9a03-471a-9cf5-5acd29c3fa59" alt="CMPProgress GIF">
 </p>
