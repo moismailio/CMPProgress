@@ -27,7 +27,7 @@ commonMain.dependencies {
     implementation("io.github.mohamed-mekawy:CMPProgress:version")
 }
 ```
-Replace version with the desired version of CMPProgress you wish to use (current version is `0.1`)
+Replace version with the desired version of CMPProgress you wish to use (current version is `0.2`)
 
 ## Available Progress Indicators
 ### Circular Progress
